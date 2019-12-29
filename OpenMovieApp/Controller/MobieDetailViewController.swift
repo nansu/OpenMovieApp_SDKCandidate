@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MobieDetailViewController.swift
 //  OpenMovieApp
 //
 //  Created by Nan Su on 12/29/19.
@@ -8,13 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class MovieDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
     }
-
-
 }
-
