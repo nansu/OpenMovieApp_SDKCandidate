@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FF6F84023B94AE600414ABA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6F83F23B94AE600414ABA /* AppDelegate.swift */; };
+		1FF6F84223B94AE600414ABA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6F84123B94AE600414ABA /* SceneDelegate.swift */; };
+		1FF6F84423B94AE600414ABA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6F84323B94AE600414ABA /* ViewController.swift */; };
+		1FF6F84723B94AE600414ABA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6F84523B94AE600414ABA /* Main.storyboard */; };
+		1FF6F84923B94AE900414ABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6F84823B94AE900414ABA /* Assets.xcassets */; };
+		1FF6F84C23B94AE900414ABA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6F84A23B94AE900414ABA /* LaunchScreen.storyboard */; };
+		1FF6F85723B94AE900414ABA /* OpenMovieAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6F85623B94AE900414ABA /* OpenMovieAppTests.swift */; };
+		1FF6F86223B94AE900414ABA /* OpenMovieAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6F86123B94AE900414ABA /* OpenMovieAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1FF6F85323B94AE900414ABA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FF6F83423B94AE600414ABA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FF6F83B23B94AE600414ABA;
+			remoteInfo = OpenMovieApp;
+		};
+		1FF6F85E23B94AE900414ABA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FF6F83423B94AE600414ABA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FF6F83B23B94AE600414ABA;
+			remoteInfo = OpenMovieApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1FF6F83C23B94AE600414ABA /* OpenMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FF6F83F23B94AE600414ABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1FF6F84123B94AE600414ABA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1FF6F84323B94AE600414ABA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1FF6F84623B94AE600414ABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1FF6F84823B94AE900414ABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1FF6F84B23B94AE900414ABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1FF6F84D23B94AE900414ABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FF6F85223B94AE900414ABA /* OpenMovieAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenMovieAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FF6F85623B94AE900414ABA /* OpenMovieAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMovieAppTests.swift; sourceTree = "<group>"; };
+		1FF6F85823B94AE900414ABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FF6F85D23B94AE900414ABA /* OpenMovieAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenMovieAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FF6F86123B94AE900414ABA /* OpenMovieAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMovieAppUITests.swift; sourceTree = "<group>"; };
+		1FF6F86323B94AE900414ABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FF6F83923B94AE600414ABA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FF6F84F23B94AE900414ABA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FF6F85A23B94AE900414ABA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FF6F83323B94AE600414ABA = {
+			isa = PBXGroup;
+			children = (
+				1FF6F83E23B94AE600414ABA /* OpenMovieApp */,
+				1FF6F85523B94AE900414ABA /* OpenMovieAppTests */,
+				1FF6F86023B94AE900414ABA /* OpenMovieAppUITests */,
+				1FF6F83D23B94AE600414ABA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1FF6F83D23B94AE600414ABA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6F83C23B94AE600414ABA /* OpenMovieApp.app */,
+				1FF6F85223B94AE900414ABA /* OpenMovieAppTests.xctest */,
+				1FF6F85D23B94AE900414ABA /* OpenMovieAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FF6F83E23B94AE600414ABA /* OpenMovieApp */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6F83F23B94AE600414ABA /* AppDelegate.swift */,
+				1FF6F84123B94AE600414ABA /* SceneDelegate.swift */,
+				1FF6F84323B94AE600414ABA /* ViewController.swift */,
+				1FF6F84523B94AE600414ABA /* Main.storyboard */,
+				1FF6F84823B94AE900414ABA /* Assets.xcassets */,
+				1FF6F84A23B94AE900414ABA /* LaunchScreen.storyboard */,
+				1FF6F84D23B94AE900414ABA /* Info.plist */,
+			);
+			path = OpenMovieApp;
+			sourceTree = "<group>";
+		};
+		1FF6F85523B94AE900414ABA /* OpenMovieAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6F85623B94AE900414ABA /* OpenMovieAppTests.swift */,
+				1FF6F85823B94AE900414ABA /* Info.plist */,
+			);
+			path = OpenMovieAppTests;
+			sourceTree = "<group>";
+		};
+		1FF6F86023B94AE900414ABA /* OpenMovieAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1FF6F86123B94AE900414ABA /* OpenMovieAppUITests.swift */,
+				1FF6F86323B94AE900414ABA /* Info.plist */,
+			);
+			path = OpenMovieAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FF6F83B23B94AE600414ABA /* OpenMovieApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FF6F86623B94AE900414ABA /* Build configuration list for PBXNativeTarget "OpenMovieApp" */;
+			buildPhases = (
+				1FF6F83823B94AE600414ABA /* Sources */,
+				1FF6F83923B94AE600414ABA /* Frameworks */,
+				1FF6F83A23B94AE600414ABA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenMovieApp;
+			productName = OpenMovieApp;
+			productReference = 1FF6F83C23B94AE600414ABA /* OpenMovieApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1FF6F85123B94AE900414ABA /* OpenMovieAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FF6F86923B94AE900414ABA /* Build configuration list for PBXNativeTarget "OpenMovieAppTests" */;
+			buildPhases = (
+				1FF6F84E23B94AE900414ABA /* Sources */,
+				1FF6F84F23B94AE900414ABA /* Frameworks */,
+				1FF6F85023B94AE900414ABA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FF6F85423B94AE900414ABA /* PBXTargetDependency */,
+			);
+			name = OpenMovieAppTests;
+			productName = OpenMovieAppTests;
+			productReference = 1FF6F85223B94AE900414ABA /* OpenMovieAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1FF6F85C23B94AE900414ABA /* OpenMovieAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FF6F86C23B94AE900414ABA /* Build configuration list for PBXNativeTarget "OpenMovieAppUITests" */;
+			buildPhases = (
+				1FF6F85923B94AE900414ABA /* Sources */,
+				1FF6F85A23B94AE900414ABA /* Frameworks */,
+				1FF6F85B23B94AE900414ABA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FF6F85F23B94AE900414ABA /* PBXTargetDependency */,
+			);
+			name = OpenMovieAppUITests;
+			productName = OpenMovieAppUITests;
+			productReference = 1FF6F85D23B94AE900414ABA /* OpenMovieAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FF6F83423B94AE600414ABA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Nan Su";
+				TargetAttributes = {
+					1FF6F83B23B94AE600414ABA = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					1FF6F85123B94AE900414ABA = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 1FF6F83B23B94AE600414ABA;
+					};
+					1FF6F85C23B94AE900414ABA = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 1FF6F83B23B94AE600414ABA;
+					};
+				};
+			};
+			buildConfigurationList = 1FF6F83723B94AE600414ABA /* Build configuration list for PBXProject "OpenMovieApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1FF6F83323B94AE600414ABA;
+			productRefGroup = 1FF6F83D23B94AE600414ABA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FF6F83B23B94AE600414ABA /* OpenMovieApp */,
+				1FF6F85123B94AE900414ABA /* OpenMovieAppTests */,
+				1FF6F85C23B94AE900414ABA /* OpenMovieAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FF6F83A23B94AE600414ABA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FF6F84C23B94AE900414ABA /* LaunchScreen.storyboard in Resources */,
+				1FF6F84923B94AE900414ABA /* Assets.xcassets in Resources */,
+				1FF6F84723B94AE600414ABA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FF6F85023B94AE900414ABA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FF6F85B23B94AE900414ABA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FF6F83823B94AE600414ABA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FF6F84423B94AE600414ABA /* ViewController.swift in Sources */,
+				1FF6F84023B94AE600414ABA /* AppDelegate.swift in Sources */,
+				1FF6F84223B94AE600414ABA /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FF6F84E23B94AE900414ABA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FF6F85723B94AE900414ABA /* OpenMovieAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FF6F85923B94AE900414ABA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FF6F86223B94AE900414ABA /* OpenMovieAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1FF6F85423B94AE900414ABA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FF6F83B23B94AE600414ABA /* OpenMovieApp */;
+			targetProxy = 1FF6F85323B94AE900414ABA /* PBXContainerItemProxy */;
+		};
+		1FF6F85F23B94AE900414ABA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FF6F83B23B94AE600414ABA /* OpenMovieApp */;
+			targetProxy = 1FF6F85E23B94AE900414ABA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1FF6F84523B94AE600414ABA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FF6F84623B94AE600414ABA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1FF6F84A23B94AE900414ABA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FF6F84B23B94AE900414ABA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1FF6F86423B94AE900414ABA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1FF6F86523B94AE900414ABA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1FF6F86723B94AE900414ABA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3LW2DDN6M7;
+				INFOPLIST_FILE = OpenMovieApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nansutest.OpenMovieApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1FF6F86823B94AE900414ABA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3LW2DDN6M7;
+				INFOPLIST_FILE = OpenMovieApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nansutest.OpenMovieApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1FF6F86A23B94AE900414ABA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3LW2DDN6M7;
+				INFOPLIST_FILE = OpenMovieAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nansutest.OpenMovieAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenMovieApp.app/OpenMovieApp";
+			};
+			name = Debug;
+		};
+		1FF6F86B23B94AE900414ABA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3LW2DDN6M7;
+				INFOPLIST_FILE = OpenMovieAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nansutest.OpenMovieAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenMovieApp.app/OpenMovieApp";
+			};
+			name = Release;
+		};
+		1FF6F86D23B94AE900414ABA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3LW2DDN6M7;
+				INFOPLIST_FILE = OpenMovieAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nansutest.OpenMovieAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OpenMovieApp;
+			};
+			name = Debug;
+		};
+		1FF6F86E23B94AE900414ABA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3LW2DDN6M7;
+				INFOPLIST_FILE = OpenMovieAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nansutest.OpenMovieAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OpenMovieApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FF6F83723B94AE600414ABA /* Build configuration list for PBXProject "OpenMovieApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FF6F86423B94AE900414ABA /* Debug */,
+				1FF6F86523B94AE900414ABA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FF6F86623B94AE900414ABA /* Build configuration list for PBXNativeTarget "OpenMovieApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FF6F86723B94AE900414ABA /* Debug */,
+				1FF6F86823B94AE900414ABA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FF6F86923B94AE900414ABA /* Build configuration list for PBXNativeTarget "OpenMovieAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FF6F86A23B94AE900414ABA /* Debug */,
+				1FF6F86B23B94AE900414ABA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FF6F86C23B94AE900414ABA /* Build configuration list for PBXNativeTarget "OpenMovieAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FF6F86D23B94AE900414ABA /* Debug */,
+				1FF6F86E23B94AE900414ABA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1FF6F83423B94AE600414ABA /* Project object */;
+}
