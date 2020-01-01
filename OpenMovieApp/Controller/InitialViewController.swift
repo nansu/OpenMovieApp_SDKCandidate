@@ -13,8 +13,7 @@ class InitialViewController: UIViewController {
     var movieService:MovieService = OpenMovieService()
     
     override func viewDidLoad() {
-        print ("loaded")
-        
+
         super.viewDidLoad()
         movieService.getMovie { (movie, error) in
             if error != nil {
