@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lJl-hf-qvF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xl9-pY-nLh">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Movies Table View Controller-->
+        <!--OpenMovie Search-->
         <scene sceneID="xKI-hZ-hGD">
             <objects>
                 <tableViewController id="lJl-hf-qvF" customClass="MoviesTableViewController" customModule="OpenMovieApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,6 +40,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="HrD-9s-NhY"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -48,10 +51,11 @@
                             <outlet property="delegate" destination="lJl-hf-qvF" id="5Ob-D6-cYT"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="OpenMovie Search" id="b2y-DX-ZTU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRa-EX-H49" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-736" y="14"/>
+            <point key="canvasLocation" x="202.40000000000001" y="13.943028485757123"/>
         </scene>
         <!--Movie Detail View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -63,49 +67,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" image="imageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="9H4-9A-2Qk">
-                                <rect key="frame" x="33" y="29" width="308" height="200"/>
+                                <rect key="frame" x="33" y="73" width="308" height="200"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyU-op-eRz">
-                                <rect key="frame" x="16" y="251.5" width="54" height="21"/>
+                                <rect key="frame" x="16" y="295.5" width="54" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Year:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7F-a0-8Hz">
-                                <rect key="frame" x="16" y="304.5" width="54" height="21"/>
+                                <rect key="frame" x="16" y="348.5" width="54" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Plot:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vx9-2Z-eCJ">
-                                <rect key="frame" x="16" y="420" width="54" height="21"/>
+                                <rect key="frame" x="16" y="464" width="54" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdd-Mo-Awq">
-                                <rect key="frame" x="16" y="354.5" width="54" height="21"/>
+                                <rect key="frame" x="16" y="398.5" width="54" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o4D-9T-bvB">
-                                <rect key="frame" x="100" y="246" width="259" height="34"/>
+                                <rect key="frame" x="100" y="290" width="259" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BE7-HQ-pVh">
-                                <rect key="frame" x="100" y="299" width="259" height="34"/>
+                                <rect key="frame" x="100" y="343" width="259" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUz-Cm-L54">
-                                <rect key="frame" x="100" y="349" width="259" height="34"/>
+                                <rect key="frame" x="100" y="393" width="259" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="l6f-ty-EOt">
-                                <rect key="frame" x="100" y="420" width="241" height="204"/>
+                                <rect key="frame" x="100" y="464" width="241" height="160"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -277,9 +281,35 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="BQC-28-FCy"/>
+                    <connections>
+                        <outlet property="moviePoster" destination="9H4-9A-2Qk" id="D42-AL-mGg"/>
+                        <outlet property="plotTextView" destination="l6f-ty-EOt" id="B0a-45-H8G"/>
+                        <outlet property="ratingTextField" destination="xUz-Cm-L54" id="xXi-hx-Ybm"/>
+                        <outlet property="titleTextField" destination="o4D-9T-bvB" id="n1f-Nc-B5I"/>
+                        <outlet property="yearTextField" destination="BE7-HQ-pVh" id="lrq-fJ-Wef"/>
+                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="131.78410794602701" y="79.200000000000003"/>
+            <point key="canvasLocation" x="1271" y="14"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wzC-pi-p6C">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xl9-pY-nLh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mll-pF-Pyg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lJl-hf-qvF" kind="relationship" relationship="rootViewController" id="2EF-1F-WIh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t5d-jS-hwc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-736.79999999999995" y="13.943028485757123"/>
         </scene>
     </scenes>
     <resources>

@@ -9,9 +9,24 @@
 import UIKit
 
 class MovieDetailViewController: UIViewController {
+    @IBOutlet weak var moviePoster: UIImageView!
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var yearTextField: UITextField!
+    @IBOutlet weak var ratingTextField: UITextField!
+    @IBOutlet weak var plotTextView: UITextView!
+    
+    var movie:Movie?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // todo: load the movie details...
+        if let movie = movie {
+            moviePoster.image = movie.poster
+            titleTextField.text = movie.title
+            yearTextField.text = movie.year
+            ratingTextField.text = movie.rating
+            plotTextView.text = movie.plot
+        }
 
     }
 }
