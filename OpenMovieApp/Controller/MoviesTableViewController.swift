@@ -11,15 +11,16 @@ import UIKit
 class MoviesTableViewController: UITableViewController {
     
     var moviesManager = MoviesManager()
+    
+    let searchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        
+        self.navigationItem.searchController = searchController
     }
 
     // MARK: - Table view data source
@@ -87,4 +88,12 @@ class MoviesTableViewController: UITableViewController {
         }
     }
 
+}
+
+extension MoviesTableViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let searchText = searchController.searchBar.text else { return }
+        moviesManager.searchFilter = searchText
+        tableView.reloadData()
+    }
 }

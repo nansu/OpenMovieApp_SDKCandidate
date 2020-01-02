@@ -9,17 +9,25 @@
 import Foundation
 class MoviesManager {
     private lazy var movies = loadMovies()
+    private var filteredMovies:[Movie] = []
     
     var movieCount: Int {
-        return movies.count
+        return searchFilter.isEmpty ? movies.count : filteredMovies.count
     }
     
     private func loadMovies() -> [Movie] {
         return sampleMovies()
     }
     
+    var searchFilter:String = "" {
+        didSet {
+            // todo: get movies list
+            filter()
+        }
+    }
+    
     func getMovie(at index:Int) -> Movie {
-        return movies[index]
+        return searchFilter.isEmpty ? movies[index] : filteredMovies[index]
     }
     
     private func sampleMovies() -> [Movie] {
@@ -30,5 +38,11 @@ class MoviesManager {
             Movie(title: "title 4", year: "11991", plot: "a plot", rating: "C"),
             Movie(title: "title 5", year: "1992", plot: "a plot", rating: "D")
         ]
+    }
+    
+    func filter() {
+        filteredMovies = movies.filter { movie in
+            return movie.title.localizedLowercase.contains(searchFilter.localizedLowercase) || movie.year.localizedLowercase.contains(searchFilter.localizedLowercase)
+        }
     }
 }
