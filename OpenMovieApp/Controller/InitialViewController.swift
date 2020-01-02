@@ -15,14 +15,6 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
-        movieService.getMovie { (movie, error) in
-            if error != nil {
-                //deal with error
-                return
-            } else {
-                print (movie)
-            }
-        }
     }
 
 

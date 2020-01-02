@@ -12,8 +12,8 @@ struct Movie {
     static let defaultPoster = UIImage(named: "imageIcon.png")
     var title:String
     var year:String
-    var plot:String
-    var rating:String
+    var plot:String?
+    var rating:String?
     
     private var image:UIImage? = nil
     
@@ -26,8 +26,8 @@ struct Movie {
         }
     }
     
-    init(title:String, year:String, plot:String,
-         rating:String, poster:UIImage? = nil) {
+    init(title:String, year:String, plot:String = "",
+         rating:String = "", poster:UIImage? = nil) {
         self.title = title
         self.year = year
         self.plot = plot

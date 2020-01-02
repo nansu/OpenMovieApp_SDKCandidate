@@ -10,9 +10,10 @@ import Foundation
 class MoviesManager {
     private lazy var movies = loadMovies()
     private var filteredMovies:[Movie] = []
+    var movieService:MovieService = OpenMovieService()
     
     var movieCount: Int {
-        return searchFilter.isEmpty ? movies.count : filteredMovies.count
+        return searchFilter.isEmpty ? 0 : movies.count
     }
     
     private func loadMovies() -> [Movie] {
@@ -26,8 +27,8 @@ class MoviesManager {
         }
     }
     
-    func getMovie(at index:Int) -> Movie {
-        return searchFilter.isEmpty ? movies[index] : filteredMovies[index]
+    func getMovie(at index:Int) -> Movie? {
+        return searchFilter.isEmpty ? nil : movies[index]
     }
     
     private func sampleMovies() -> [Movie] {
@@ -41,8 +42,15 @@ class MoviesManager {
     }
     
     func filter() {
-        filteredMovies = movies.filter { movie in
-            return movie.title.localizedLowercase.contains(searchFilter.localizedLowercase) || movie.year.localizedLowercase.contains(searchFilter.localizedLowercase)
-        }
+        movieService.getMovies(search: searchFilter.localizedLowercase, completionHandler: { (movies, error) in
+            if error != nil {
+                //deal with error
+                return
+            } else {
+                print("### \(movies)")
+                self.movies = movies ?? []
+            }
+        })
     }
+    
 }
