@@ -9,13 +9,22 @@
 import UIKit
 
 struct Movie {
+    static let defaultPoster = UIImage(named: "imageIcon.png")
     var title:String
     var year:String
     var plot:String
     var rating:String
-    var poster:UIImage?
     
     private var image:UIImage? = nil
+    
+    var poster:UIImage {
+        get {
+            return image ?? Movie.defaultPoster!
+        }
+        set {
+            image = newValue
+        }
+    }
     
     init(title:String, year:String, plot:String,
          rating:String, poster:UIImage? = nil) {

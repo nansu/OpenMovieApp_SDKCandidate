@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		07680D8370FE449BA17054CC /* Pods_OpenMovieAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB4FB3A94F1758858781A5C /* Pods_OpenMovieAppTests.framework */; };
 		1FA47C9E23B957C90017D115 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA47C9D23B957C90017D115 /* Movie.swift */; };
-		1FA47CA023B957D60017D115 /* MovieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA47C9F23B957D60017D115 /* MovieManager.swift */; };
+		1FA47CA023B957D60017D115 /* MoviesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA47C9F23B957D60017D115 /* MoviesManager.swift */; };
 		1FA47CA223B957F50017D115 /* OpenMovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA47CA123B957F50017D115 /* OpenMovieService.swift */; };
 		1FA47CA423B95C070017D115 /* MobieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA47CA323B95C070017D115 /* MobieDetailViewController.swift */; };
+		1FA47CA623BD1BD80017D115 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA47CA523BD1BD80017D115 /* MoviesTableViewController.swift */; };
 		1FF6F84023B94AE600414ABA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6F83F23B94AE600414ABA /* AppDelegate.swift */; };
 		1FF6F84223B94AE600414ABA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6F84123B94AE600414ABA /* SceneDelegate.swift */; };
 		1FF6F84423B94AE600414ABA /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6F84323B94AE600414ABA /* InitialViewController.swift */; };
@@ -46,9 +47,10 @@
 		07BF39B0E740507DFE14985F /* Pods_OpenMovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenMovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10D468974B5DD81E74084DFB /* Pods-OpenMovieApp-OpenMovieAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenMovieApp-OpenMovieAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-OpenMovieApp-OpenMovieAppUITests/Pods-OpenMovieApp-OpenMovieAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1FA47C9D23B957C90017D115 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
-		1FA47C9F23B957D60017D115 /* MovieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieManager.swift; sourceTree = "<group>"; };
+		1FA47C9F23B957D60017D115 /* MoviesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesManager.swift; sourceTree = "<group>"; };
 		1FA47CA123B957F50017D115 /* OpenMovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMovieService.swift; sourceTree = "<group>"; };
 		1FA47CA323B95C070017D115 /* MobieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobieDetailViewController.swift; sourceTree = "<group>"; };
+		1FA47CA523BD1BD80017D115 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
 		1FF6F83C23B94AE600414ABA /* OpenMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF6F83F23B94AE600414ABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FF6F84123B94AE600414ABA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				1FA47C9D23B957C90017D115 /* Movie.swift */,
-				1FA47C9F23B957D60017D115 /* MovieManager.swift */,
+				1FA47C9F23B957D60017D115 /* MoviesManager.swift */,
 				1FA47CA123B957F50017D115 /* OpenMovieService.swift */,
 			);
 			path = Model;
@@ -134,6 +136,7 @@
 			children = (
 				1FF6F84323B94AE600414ABA /* InitialViewController.swift */,
 				1FA47CA323B95C070017D115 /* MobieDetailViewController.swift */,
+				1FA47CA523BD1BD80017D115 /* MoviesTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -445,8 +448,9 @@
 			files = (
 				1FF6F84423B94AE600414ABA /* InitialViewController.swift in Sources */,
 				1FF6F84023B94AE600414ABA /* AppDelegate.swift in Sources */,
-				1FA47CA023B957D60017D115 /* MovieManager.swift in Sources */,
+				1FA47CA023B957D60017D115 /* MoviesManager.swift in Sources */,
 				1FA47CA423B95C070017D115 /* MobieDetailViewController.swift in Sources */,
+				1FA47CA623BD1BD80017D115 /* MoviesTableViewController.swift in Sources */,
 				1FA47C9E23B957C90017D115 /* Movie.swift in Sources */,
 				1FF6F84223B94AE600414ABA /* SceneDelegate.swift in Sources */,
 				1FA47CA223B957F50017D115 /* OpenMovieService.swift in Sources */,
