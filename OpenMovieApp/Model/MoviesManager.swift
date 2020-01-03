@@ -13,6 +13,7 @@ class MoviesManager {
     var movieService:MovieService = OpenMovieService()
     
     var movieCount: Int {
+        print ("Filter \(searchFilter)")
         return searchFilter.isEmpty ? 0 : movies.count
     }
     
@@ -22,13 +23,15 @@ class MoviesManager {
     
     var searchFilter:String = "" {
         didSet {
-            // todo: get movies list
             filter()
         }
     }
     
     func getMovie(at index:Int) -> Movie? {
-        return searchFilter.isEmpty ? nil : movies[index]
+        if index < movies.count {
+            return searchFilter.isEmpty ? nil : movies[index]
+        }
+        return nil
     }
     
     private func sampleMovies() -> [Movie] {

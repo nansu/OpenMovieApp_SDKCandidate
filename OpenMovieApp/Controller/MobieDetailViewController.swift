@@ -14,19 +14,37 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var yearTextField: UITextField!
     @IBOutlet weak var ratingTextField: UITextField!
     @IBOutlet weak var plotTextView: UITextView!
+
+    var movieService:MovieService = OpenMovieService()
     
     var movie:Movie?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // todo: load the movie details...
+
         if let movie = movie {
-            moviePoster.image = movie.poster
-            titleTextField.text = movie.title
-            yearTextField.text = movie.year
-            ratingTextField.text = movie.rating
-            plotTextView.text = movie.plot
+            movieService.getMovieDetails(title: movie.title, completionHandler: { (data, error) in
+                    if error != nil {
+                        //deal with error
+                        return
+                    } else {
+                        self.moviePoster.image = movie.poster
+                        self.titleTextField.text = movie.title
+                        self.yearTextField.text = movie.year
+                        self.ratingTextField.text = data["rating"]
+                        self.plotTextView.text = data["plot"]
+                    }
+            })
         }
+
+        
+//        if let movie = movie {
+//            self.moviePoster.image = movie.poster
+//            self.titleTextField.text = movie.title
+//            self.yearTextField.text = movie.year
+//            self.ratingTextField.text = "test"
+//            self.plotTextView.text = "sfsdf"
+//        }
 
     }
 }

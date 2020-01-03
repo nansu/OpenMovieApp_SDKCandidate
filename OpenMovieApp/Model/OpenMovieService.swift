@@ -11,6 +11,7 @@ import SwiftyJSON
 
 protocol MovieService {
     func getMovies(search:String, completionHandler: @escaping ([Movie]?, Error?) -> Void)
+    func getMovieDetails(title:String, completionHandler: @escaping ([String:String], Error?) -> Void)
     func cancel()
 }
 
@@ -43,8 +44,37 @@ class OpenMovieService:NSObject, MovieService, URLSessionDelegate {
         task?.resume()
     }
     
+    func getMovieDetails(title:String, completionHandler: @escaping ([String:String], Error?) -> Void) {
+        guard var components = URLComponents(string: omUrl) else { return }
+        components.queryItems = [URLQueryItem(name: "apikey", value: omAPIKey), URLQueryItem(name: "t", value: title)]
+        guard let url = components.url else { return }
+        
+        // generate request
+        let request = URLRequest(url: url)
+        
+        task = session.dataTask(with: request) { (data, response, error) in
+            guard let data = data else { return }
+            self.parseMovieDetails(data: data, completionHandler: completionHandler)
+        }
+        task?.resume()
+    }
+    
     func cancel() {
         task?.cancel()
+    }
+    
+    private func parseMovieDetails(data:Data, completionHandler: @escaping ([String:String], Error?) -> Void) {
+            do {
+                let dataAsJSON = try JSON(data: data)
+                let rating = dataAsJSON["imdbRating"].string ?? ""
+                let plot = dataAsJSON["Plot"].string ?? ""
+                print("json \(dataAsJSON)")
+                print("rating \(rating) plot \(plot)")
+                completionHandler(["plot": plot, "rating": rating], nil)
+          } catch let error as NSError {
+            completionHandler(["":""], error)
+              return
+          }
     }
     
     private func parseSwiftyJSON(data:Data, completionHandler: @escaping ([Movie]?, Error?) -> Void) {
@@ -55,13 +85,12 @@ class OpenMovieService:NSObject, MovieService, URLSessionDelegate {
             for item in dataAsJSON["Search"].arrayValue {
                 if let title = item["Title"].string,
                     let year = item["Year"].string,
-                    let poster = item["Poster"].string{
-                    guard let url = URL(string: poster) else {return}
-                    guard let data = try? Data(contentsOf: url) else { return }
-                    let image = UIImage(data: data)
-                    let movie = Movie(title: title, year: year, poster: image)
-//                    loadPoster(movie: movie, posterUrl: poster, completionHandler: completionHandler)
-                    moviesReturned.append(movie)
+                    let poster = item["Poster"].string {
+                        guard let url = URL(string: poster) else { return }
+                        guard let data = try? Data(contentsOf: url) else { return }
+                        let image = UIImage(data: data)
+                        let movie = Movie(title: title, year: year, poster: image)
+                        moviesReturned.append(movie)
                 }
             }
             completionHandler(moviesReturned, nil)

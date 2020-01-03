@@ -97,3 +97,4 @@ extension MoviesTableViewController: UISearchResultsUpdating {
         tableView.reloadData()
     }
 }
+
