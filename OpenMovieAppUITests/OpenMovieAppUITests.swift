@@ -40,4 +40,13 @@ class OpenMovieAppUITests: XCTestCase {
             }
         }
     }
+    
+    func testSearchBar() {
+        let openmovieSearchNavigationBar = XCUIApplication().navigationBars["OpenMovie Search"]
+        let searchSearchField = openmovieSearchNavigationBar.searchFields["Search"]
+//        searchSearchField.tap()
+//        searchSearchField.buttons["Clear text"].tap()
+//        openmovieSearchNavigationBar.buttons["Cancel"].tap()
+        
+    }
 }
