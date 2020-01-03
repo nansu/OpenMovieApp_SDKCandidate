@@ -7,10 +7,16 @@
 //
 
 import Foundation
+
+protocol MoviesManagerDelegate:AnyObject {
+    func fetched()
+}
+
 class MoviesManager {
     private lazy var movies = loadMovies()
     private var filteredMovies:[Movie] = []
     var movieService:MovieService = OpenMovieService()
+    weak var delegate:MoviesManagerDelegate?
     
     var movieCount: Int {
         return searchFilter.isEmpty ? 0 : movies.count
@@ -22,9 +28,12 @@ class MoviesManager {
     
     var searchFilter:String = "" {
         didSet {
-            filter()
+            timer?.invalidate()
+            timer = Timer.scheduledTimer(timeInterval: 0.25, target: self, selector: #selector(fetch), userInfo: nil, repeats: false)
         }
     }
+    
+    var timer:Timer?
     
     func getMovie(at index:Int) -> Movie? {
         if index < movies.count {
@@ -38,12 +47,12 @@ class MoviesManager {
             Movie(title: "title 1", year: "1990", plot: "a plot", rating: "R"),
             Movie(title: "title 2", year: "1987", plot: "a plot", rating: "A"),
             Movie(title: "title 3", year: "1988", plot: "a plot", rating: "B"),
-            Movie(title: "title 4", year: "11991", plot: "a plot", rating: "C"),
+            Movie(title: "title 4", year: "1991", plot: "a plot", rating: "C"),
             Movie(title: "title 5", year: "1992", plot: "a plot", rating: "D")
         ]
     }
     
-    func filter() {
+    @objc func fetch() {
         movieService.getMovies(search: searchFilter.localizedLowercase, completionHandler: { (movies, error) in
             if error != nil {
                 return
@@ -51,6 +60,7 @@ class MoviesManager {
                 self.movies = movies ?? []
             }
         })
+        delegate?.fetched()
     }
     
 }

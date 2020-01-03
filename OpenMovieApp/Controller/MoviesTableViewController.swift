@@ -16,6 +16,7 @@ class MoviesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        moviesManager.delegate = self
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         definesPresentationContext = true
@@ -56,7 +57,11 @@ extension MoviesTableViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchText = searchController.searchBar.text else { return }
         moviesManager.searchFilter = searchText
-        tableView.reloadData()
     }
 }
 
+extension MoviesTableViewController:MoviesManagerDelegate {
+    func fetched() {
+        tableView.reloadData()
+    }
+}
