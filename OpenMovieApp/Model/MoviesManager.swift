@@ -47,10 +47,8 @@ class MoviesManager {
     func filter() {
         movieService.getMovies(search: searchFilter.localizedLowercase, completionHandler: { (movies, error) in
             if error != nil {
-                //deal with error
                 return
             } else {
-                print("### \(movies)")
                 self.movies = movies ?? []
             }
         })

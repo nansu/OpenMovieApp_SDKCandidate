@@ -13,7 +13,6 @@ class InitialViewController: UIViewController {
     var movieService:MovieService = OpenMovieService()
     
     override func viewDidLoad() {
-
         super.viewDidLoad()
     }
 

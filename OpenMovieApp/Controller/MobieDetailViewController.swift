@@ -25,7 +25,6 @@ class MovieDetailViewController: UIViewController {
         if let movie = movie {
             movieService.getMovieDetails(title: movie.title, completionHandler: { (data, error) in
                     if error != nil {
-                        //deal with error
                         return
                     } else {
                         self.moviePoster.image = movie.poster
@@ -36,15 +35,5 @@ class MovieDetailViewController: UIViewController {
                     }
             })
         }
-
-        
-//        if let movie = movie {
-//            self.moviePoster.image = movie.poster
-//            self.titleTextField.text = movie.title
-//            self.yearTextField.text = movie.year
-//            self.ratingTextField.text = "test"
-//            self.plotTextView.text = "sfsdf"
-//        }
-
     }
 }

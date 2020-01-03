@@ -68,8 +68,6 @@ class OpenMovieService:NSObject, MovieService, URLSessionDelegate {
                 let dataAsJSON = try JSON(data: data)
                 let rating = dataAsJSON["imdbRating"].string ?? ""
                 let plot = dataAsJSON["Plot"].string ?? ""
-                print("json \(dataAsJSON)")
-                print("rating \(rating) plot \(plot)")
                 completionHandler(["plot": plot, "rating": rating], nil)
           } catch let error as NSError {
             completionHandler(["":""], error)
@@ -78,27 +76,25 @@ class OpenMovieService:NSObject, MovieService, URLSessionDelegate {
     }
     
     private func parseSwiftyJSON(data:Data, completionHandler: @escaping ([Movie]?, Error?) -> Void) {
-        do {
-            var moviesReturned = [Movie]()
-            let dataAsJSON = try JSON(data: data)
-//            print(dataAsJSON)
-            for item in dataAsJSON["Search"].arrayValue {
-                if let title = item["Title"].string,
-                    let year = item["Year"].string,
-                    let poster = item["Poster"].string {
-                        guard let url = URL(string: poster) else { return }
-                        guard let data = try? Data(contentsOf: url) else { return }
-                        let image = UIImage(data: data)
-                        let movie = Movie(title: title, year: year, poster: image)
-                        moviesReturned.append(movie)
+            do {
+                var moviesReturned = [Movie]()
+                let dataAsJSON = try JSON(data: data)
+                for item in dataAsJSON["Search"].arrayValue {
+                    if let title = item["Title"].string,
+                        let year = item["Year"].string,
+                        let poster = item["Poster"].string {
+                            guard let url = URL(string: poster) else { return }
+                            guard let data = try? Data(contentsOf: url) else { return }
+                            let image = UIImage(data: data)
+                            let movie = Movie(title: title, year: year, poster: image)
+                            moviesReturned.append(movie)
+                    }
                 }
-            }
-            completionHandler(moviesReturned, nil)
-      } catch let error as NSError {
-          completionHandler(nil, error)
-          return
-      }
-//      completionHandler(nil, nil)
+                completionHandler(moviesReturned, nil)
+          } catch let error as NSError {
+              completionHandler(nil, error)
+              return
+          }
     }
     
     func loadPoster(movie:Movie, posterUrl:String, completionHandler: @escaping ([Movie]?, Error?) -> Void) {
@@ -110,7 +106,6 @@ class OpenMovieService:NSObject, MovieService, URLSessionDelegate {
             let image = UIImage(data: data) {
             movie.poster = image
             }
-            //completionHandler(movie,error)
         }
         task?.resume()
     }
