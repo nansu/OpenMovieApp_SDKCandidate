@@ -13,6 +13,7 @@
 		1FA47CA223B957F50017D115 /* OpenMovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA47CA123B957F50017D115 /* OpenMovieService.swift */; };
 		1FA47CA423B95C070017D115 /* MobieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA47CA323B95C070017D115 /* MobieDetailViewController.swift */; };
 		1FA47CA623BD1BD80017D115 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA47CA523BD1BD80017D115 /* MoviesTableViewController.swift */; };
+		1FA47CA823BFC6840017D115 /* MoviesManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA47CA723BFC6840017D115 /* MoviesManagerTests.swift */; };
 		1FF6F84023B94AE600414ABA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6F83F23B94AE600414ABA /* AppDelegate.swift */; };
 		1FF6F84223B94AE600414ABA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6F84123B94AE600414ABA /* SceneDelegate.swift */; };
 		1FF6F84723B94AE600414ABA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6F84523B94AE600414ABA /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		1FA47CA123B957F50017D115 /* OpenMovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMovieService.swift; sourceTree = "<group>"; };
 		1FA47CA323B95C070017D115 /* MobieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobieDetailViewController.swift; sourceTree = "<group>"; };
 		1FA47CA523BD1BD80017D115 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
+		1FA47CA723BFC6840017D115 /* MoviesManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesManagerTests.swift; sourceTree = "<group>"; };
 		1FF6F83C23B94AE600414ABA /* OpenMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF6F83F23B94AE600414ABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FF6F84123B94AE600414ABA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		1FF6F85523B94AE900414ABA /* OpenMovieAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				1FA47CA723BFC6840017D115 /* MoviesManagerTests.swift */,
 				1FF6F85623B94AE900414ABA /* OpenMovieAppTests.swift */,
 				1FF6F85823B94AE900414ABA /* Info.plist */,
 			);
@@ -457,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FA47CA823BFC6840017D115 /* MoviesManagerTests.swift in Sources */,
 				1FF6F85723B94AE900414ABA /* OpenMovieAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

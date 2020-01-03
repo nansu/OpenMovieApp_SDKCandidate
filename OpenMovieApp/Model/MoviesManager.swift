@@ -23,7 +23,7 @@ class MoviesManager {
     }
     
     private func loadMovies() -> [Movie] {
-        return sampleMovies()
+        return loadPlaceHolderMovies()
     }
     
     var searchFilter:String = "" {
@@ -42,7 +42,7 @@ class MoviesManager {
         return nil
     }
     
-    private func sampleMovies() -> [Movie] {
+    private func loadPlaceHolderMovies() -> [Movie] {
         return [
             Movie(title: "title 1", year: "1990", plot: "a plot", rating: "R"),
             Movie(title: "title 2", year: "1987", plot: "a plot", rating: "A"),
