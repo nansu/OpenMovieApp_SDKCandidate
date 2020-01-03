@@ -62,6 +62,7 @@ extension MoviesTableViewController: UISearchResultsUpdating {
 
 extension MoviesTableViewController:MoviesManagerDelegate {
     func fetched() {
+        // print("reload")
         tableView.reloadData()
     }
 }

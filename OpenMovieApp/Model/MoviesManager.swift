@@ -29,7 +29,7 @@ class MoviesManager {
     var searchFilter:String = "" {
         didSet {
             timer?.invalidate()
-            timer = Timer.scheduledTimer(timeInterval: 0.25, target: self, selector: #selector(fetch), userInfo: nil, repeats: false)
+            timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(fetch), userInfo: nil, repeats: false)
         }
     }
     
@@ -58,9 +58,9 @@ class MoviesManager {
                 return
             } else {
                 self.movies = movies ?? []
+                // print("load in manager \(movies?.count)")
+                self.delegate?.fetched()
             }
         })
-        delegate?.fetched()
     }
-    
 }

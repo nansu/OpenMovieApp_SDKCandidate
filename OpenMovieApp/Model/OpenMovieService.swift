@@ -83,14 +83,14 @@ class OpenMovieService:NSObject, MovieService, URLSessionDelegate {
                     if let title = item["Title"].string,
                         let year = item["Year"].string,
                         let poster = item["Poster"].string {
-//                            guard let url = URL(string: poster) else { return }
-//                            guard let data = try? Data(contentsOf: url) else { return }
-//                            let image = UIImage(data: data)
-//                            let movie = Movie(title: title, year: year, poster: image)
-                            let movie = Movie(title: title, year: year)
+                            guard let url = URL(string: poster) else { return }
+                            guard let data = try? Data(contentsOf: url) else { return }
+                            let image = UIImage(data: data)
+                            let movie = Movie(title: title, year: year, poster: image)
                             moviesReturned.append(movie)
                     }
                 }
+                // print("found \(moviesReturned.count)")
                 completionHandler(moviesReturned, nil)
           } catch let error as NSError {
               completionHandler(nil, error)
