@@ -13,7 +13,6 @@ class MoviesManager {
     var movieService:MovieService = OpenMovieService()
     
     var movieCount: Int {
-        print ("Filter \(searchFilter)")
         return searchFilter.isEmpty ? 0 : movies.count
     }
     
